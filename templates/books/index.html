@@ -13,7 +13,7 @@
           <div class="form-group">
             <label class="col-md-4 control-label">Book Title</label>
             <div class="col-md-4">
-            <input id="name" ng-model="bookIndexCtrl.newBook.name" type="text" class="form-control input-md" required="">
+            <input id="title" ng-model="booksIndexCtrl.newBook.title" type="text" class="form-control input-md" required="">
             </div>
           </div>
 
@@ -33,10 +33,18 @@
             </div>
           </div>
 
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-md-4 control-label">Image</label>
+            <div class="col-md-4">
+            <input ng-model="booksIndexCtrl.newBook.image" type="text" class="form-control input-md">
+            </div>
+          </div>
+
           <!-- Button -->
           <div class="form-group">
             <div class="col-md-4 col-md-offset-4">
-              <button class="btn btn-primary control-label">Save Book</button>
+              <button class="btn btn-primary control-label">Add Book</button>
             </div>
           </div>
         </fieldset>
