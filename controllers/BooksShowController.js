@@ -15,4 +15,16 @@ function BooksShowController($http, $routeParams, $location) {
     vm.book = json.data;
   });
 
+  vm.editBook = function (book) {
+    $http({
+      method: 'PUT',
+      url: endpoint + '/' + $routeParams.id,
+      data: book
+    }).then(function successEditCallBack(response) {
+      console.log('json: ', response);
+    }, function errorEditCallback(response) {
+      console.log('There was an editing error: ', response);
+    });
+  };
+
 }
