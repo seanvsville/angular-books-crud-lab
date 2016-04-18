@@ -18,28 +18,28 @@
                     <li class="list-group-item">
                       <h4 class='inline-header'>Book Title:</h4>
                       <span ng-hide='editing'>{{booksShowCtrl.book.title}}</span>
-											<input ng-show='editing' ng-model='book.title' type='text' class='form-control input-md' placeholder="{{booksShowCtrl.book.title}}">
+											<input ng-show='editing' ng-model='booksShowCtrl.book.title' type='text' class='form-control input-md' placeholder="{{booksShowCtrl.book.title}}">
                     </li>
 
                     <li class="list-group-item">
                       <h4 class='inline-header'>Author Name:</h4>
                       <span ng-hide='editing'>{{booksShowCtrl.book.author}}</span>
-											<input ng-show='editing' ng-model='book.author' type='text' class='form-control input-md' placeholder="{{booksShowCtrl.book.author}}">
+											<input ng-show='editing' ng-model='booksShowCtrl.book.author' type='text' class='form-control input-md' placeholder="{{booksShowCtrl.book.author}}">
                     </li>
 
                     <li class="list-group-item">
                       <h4 class='inline-header'>Released Date:</h4>
                       <span ng-hide='editing'>{{booksShowCtrl.book.releaseDate}}</span>
-											<input ng-show='editing' ng-model='book.releaseDate' type='text' class='form-control input-md' placeholder="{{booksShowCtrl.book.releaseDate}}">
+											<input ng-show='editing' ng-model='booksShowCtrl.book.releaseDate' type='text' class='form-control input-md' placeholder="{{booksShowCtrl.book.releaseDate}}">
                     </li>
 
                   </ul>
                 </div>
               </div>
 							<div class='panel-footer'>
-								<button class='btn btn-danger' ng-click="booksShowCtrl.deleteBook(book)">Delete Book</button>
+								<button class='btn btn-danger' ng-click="booksShowCtrl.deleteBook(booksShowCtrl.book)">Delete Book</button>
 								<button class='btn btn-info' ng-hide="editing" ng-click="editing = true">Edit Book</button>
-								<button class='btn btn-success' ng-show="editing" ng-click="booksShowCtrl.editBook(book); editing = false">Save Changes</button>
+								<button class='btn btn-success' ng-show="editing" ng-click="booksShowCtrl.editBook(booksShowCtrl.book); editing = false">Save Changes</button>
 								<button class='btn btn-inverse' ng-show="editing" ng-click="editing = false">Cancel</button>
 							</div>
             </div>
